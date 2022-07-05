@@ -1,0 +1,82 @@
+.icon-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  margin: $margin;
+
+  .icon {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: $icon-size;
+    padding: $padding;
+    width: 80px;
+    height: 60px;
+    color: white;
+    transition-duration: $trans-time;
+    transition-property: width;
+    a {
+      transition: 0s;
+      opacity: 0;
+    }
+    &:hover {
+      width: 400px;
+      a {
+        opacity: 1;
+        transition-delay: $trans-time;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: $link-margin;
+        font-size: $link-font;
+        &:visited {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .blog {
+    background-color: #e17b77;
+    transition-timing-function: $trans-function;
+    &::before {
+      font: var(--fa-font-solid);
+      content: "\f5fc";
+    }
+  }
+  .twit {
+    background-color: #00aced;
+    transition-timing-function: $trans-function;
+    &::before {
+      font: var(--fa-font-brands);
+      content: "\f099";
+    }
+  }
+  .linkd {
+    background-color: #007bb6;
+    transition-timing-function: $trans-function;
+    &::before {
+      font: var(--fa-font-brands);
+      content: "\f0e1";
+    }
+  }
+  .fb {
+    background-color: #3b5998;
+    transition-timing-function: $trans-function;
+    &::before {
+      font: var(--fa-font-brands);
+      content: "\f39e";
+    }
+  }
+  .git {
+    background-color: #333;
+    transition-timing-function: $trans-function;
+    &::before {
+      font: var(--fa-font-brands);
+      content: "\f09b";
+    }
+  }
+}

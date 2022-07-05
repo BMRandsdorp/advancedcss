@@ -1,0 +1,218 @@
+body {
+  background: #c3cfe2;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25em;
+}
+
+/* testimonial */
+.testimonial {
+  display: block;
+  align-self: center;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 25px;
+  margin: 0.5em;
+}
+.testimonial .test-content {
+  height: 30%;
+  padding: 20px;
+  text-align: center;
+}
+.testimonial .portrait {
+  background: linear-gradient(#fff 50%, #686de0 50%);
+  height: 30%;
+  margin-bottom: 0;
+}
+.testimonial .portrait img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: #fff solid 10px;
+  border-radius: 100%;
+  padding: 0;
+  max-width: 40%;
+}
+.testimonial .test-footer {
+  background: #686de0;
+  color: #fff;
+  padding: 20px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  font-size: large;
+  text-align: center;
+  margin-top: 0;
+  height: 30%;
+}
+.testimonial .test-footer h2 {
+  margin-bottom: 5px;
+  margin-top: 0;
+  font-size: 1.5em;
+}
+.testimonial .test-footer a {
+  color: #c3cfe2;
+  font-size: 1.25em;
+  word-wrap: break-word;
+}
+
+/* portfolio grid */
+.port-grid {
+  display: grid;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  max-width: 100%;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-areas: "1" "2" "3" "4" "5" "6" "7";
+}
+.port-grid .port-container {
+  display: grid;
+  max-width: auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+.port-grid .port-container .portrait {
+  grid-area: 1/1/2/2;
+  background-color: #686de0;
+  border-radius: 25px;
+  max-width: 100%;
+  max-height: 98%;
+  align-self: center;
+  justify-self: center;
+  z-index: 3;
+}
+.port-grid .port-container .portrait img {
+  border-radius: 25px;
+  max-width: 100%;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+.port-grid .port-container .img-button {
+  grid-area: 1/1/2/2;
+  font-size: 1.2em;
+  align-self: center;
+  justify-self: center;
+  z-index: 2;
+}
+.port-grid .port-container:hover .portrait {
+  z-index: 1;
+}
+.port-grid .port-container:hover .portrait img {
+  opacity: 0;
+}
+.port-grid .port-container #port1 {
+  grid-area: 1;
+}
+.port-grid .port-container #port2 {
+  grid-area: 2;
+}
+.port-grid .port-container #port3 {
+  grid-area: 3;
+}
+.port-grid .port-container #port4 {
+  grid-area: 4;
+}
+.port-grid .port-container #port5 {
+  grid-area: 5;
+}
+.port-grid .port-container #port6 {
+  grid-area: 6;
+}
+.port-grid .port-container #port7 {
+  grid-area: 7;
+}
+
+@media screen and (min-width: 768px) {
+  .port-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "1 2" "3 4" "5 6" "7 .";
+  }
+}
+@media screen and (min-width: 1024px) {
+  .port-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "1 2 3" "4 5 6" "7 . .";
+  }
+}
+/* social media buttons */
+.icon-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  margin: 0.5em;
+}
+.icon-bar .icon {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 1.5em;
+  padding: 20px;
+  width: 80px;
+  height: 60px;
+  color: white;
+  transition-duration: 150ms;
+  transition-property: width;
+}
+.icon-bar .icon a {
+  transition: 0s;
+  opacity: 0;
+}
+.icon-bar .icon:hover {
+  width: 400px;
+}
+.icon-bar .icon:hover a {
+  opacity: 1;
+  transition-delay: 150ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  font-size: 0.8em;
+}
+.icon-bar .icon:hover a:visited {
+  color: white;
+}
+.icon-bar .blog {
+  background-color: #e17b77;
+  transition-timing-function: linear;
+}
+.icon-bar .blog::before {
+  font: var(--fa-font-solid);
+  content: "\f5fc";
+}
+.icon-bar .twit {
+  background-color: #00aced;
+  transition-timing-function: linear;
+}
+.icon-bar .twit::before {
+  font: var(--fa-font-brands);
+  content: "\f099";
+}
+.icon-bar .linkd {
+  background-color: #007bb6;
+  transition-timing-function: linear;
+}
+.icon-bar .linkd::before {
+  font: var(--fa-font-brands);
+  content: "\f0e1";
+}
+.icon-bar .fb {
+  background-color: #3b5998;
+  transition-timing-function: linear;
+}
+.icon-bar .fb::before {
+  font: var(--fa-font-brands);
+  content: "\f39e";
+}
+.icon-bar .git {
+  background-color: #333;
+  transition-timing-function: linear;
+}
+.icon-bar .git::before {
+  font: var(--fa-font-brands);
+  content: "\f09b";
+}/*# sourceMappingURL=styles.css.map */

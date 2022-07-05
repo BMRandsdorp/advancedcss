@@ -1,0 +1,53 @@
+.testimonial {
+  display: block;
+  align-self: center;
+  max-width: 400px;
+  background: $text-bg;
+  border-radius: $radius;
+  margin: $margin;
+
+  .test-content {
+    height: $height;
+    padding: $padding;
+    text-align: center;
+  }
+
+  .portrait {
+    background: linear-gradient($text-bg 50%, $footer-bg 50%);
+    height: $height;
+    margin-bottom: 0;
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border: $text-bg solid 10px;
+      border-radius: 100%;
+      padding: 0;
+      max-width: 40%;
+    }
+  }
+
+  .test-footer {
+    background: $footer-bg;
+    color: $text-bg;
+    padding: $padding;
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+    font-size: large;
+    text-align: center;
+    margin-top: 0;
+    height: $height;
+
+    h2 {
+      margin-bottom: 5px;
+      margin-top: 0;
+      font-size: 1.5em;
+    }
+
+    a {
+      color: $base-bg;
+      font-size: $font-size;
+      word-wrap: break-word;
+    }
+  }
+}
